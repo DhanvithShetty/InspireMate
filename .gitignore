@@ -40,4 +40,6 @@ Thumbs.db
 *.swp
 
 # Resulting output of the project\
+config/
 InstaPost.jpg
+InstaPost.jpg.REMOVE_ME

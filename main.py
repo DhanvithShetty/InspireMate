@@ -2,11 +2,11 @@ import random
 from Quotes import FetchQuote, RateLimitError
 from Posts import CreatePost
 from Upload import UploadPost
-from Designs import Backgrounds_And_Font_Colours
+from Designs import Backgrounds_And_Font_Colours, Caption_Hashtags
 
 def main():
     try:
-        # Step 1: Fetch a random quote and author
+        # Fetching a random quote and author
         Quote_Data = FetchQuote()
 
         Quote = Quote_Data['Quote']
@@ -15,21 +15,36 @@ def main():
         print(f"Quote: {Quote}")
         print(f"Author: {Author}")
 
-        # Step 2: Randomly select a background and font color
+        # Randomly selecting a background and font color from Designs.py
         Background, FontColour = random.choice(list(Backgrounds_And_Font_Colours.items()))
 
         print(f"Selected Background: {Background}")
         print(f"Selected Font Color: {FontColour}")
 
-        # Step 3: Prepare the output path
         CreatedPostPath = "InstaPost.jpg"
 
-        # Step 3: Create the post (image with quote)
+        # Creating the post (image with quote)
         CreatePost(Quote, Background, FontColour, CreatedPostPath)
 
-        # Step 4: Upload the post to Instagram
-        #caption = f'"{Quote}" - {Author}'  # Prepare the caption
-        #UploadPost(created_post_path, caption)
+        # Preparing the caption with hashtags from Designs.py
+        PostCaption = f'"{Quote}" - {Author}'
+        
+        CallToAction = "Tag/Share this to someone who needs to hear this!"
+        
+        # Mandatory Hashtags
+        Hashtags = ["#InspireMate", "#QuotesToLiveBy"]
+        
+        # Randomly select additional 8 more hashtags from the Caption_Hashtags list
+        Hashtags += random.sample(Caption_Hashtags, 8)  # Adjust the number for a total of 10-15 hashtags
+
+        # Join the hashtags into a string with spaces between them
+        PostHashtags = " ".join(Hashtags)
+
+        # Complete the caption by adding the CTA and hashtags
+        PostCaption += f"\n\n{CallToAction}\n\n{PostHashtags}"
+
+        # Upload the post to Instagram
+        #UploadPost(CreatedPostPath, PostCaption)
 
     except RateLimitError as e:
         # If there's a rate limit error, print the error and stop execution

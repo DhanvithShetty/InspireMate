@@ -6,3 +6,14 @@ Backgrounds_And_Font_Colours = {
     "Backgrounds/Navy_Blue.png": "#D7BB6F",
     "Backgrounds/Peach.png": "#C48B55"
 }
+
+Caption_Hashtags = [
+    "#BelieveInYourself", "#Motivation", "#PositiveVibes", 
+    "#InspirationDaily", "#SelfGrowth", "#GrowthMindset", 
+    "#WordsOfWisdom", "#SuccessMindset", "#LifeQuotes",
+    "#InspireOthers", "#MindsetMatters", "#DailyInspiration", 
+    "#NeverGiveUp", "#SuccessQuotes", "#BeTheChange", 
+    "#QuoteOfTheDay", "#MotivationalQuotes", "#InspirationalQuotes", 
+    "#HappinessIsAChoice", "#PersonalDevelopment", "#Mindfulness"
+]
+
