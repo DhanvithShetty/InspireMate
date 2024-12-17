@@ -21,14 +21,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Debug environment variables
-        run: |
-          echo "INSTA_USERNAME=${{ secrets.INSTA_USERNAME }}"
-          echo "INSTA_PASSWORD=${{ secrets.INSTA_PASSWORD }}"
-
       - name: Run the script
         env:
-          INSTA_USERNAME: ${{ secrets.INSTA_USERNAME }}
-          INSTA_PASSWORD: ${{ secrets.INSTA_PASSWORD }}
+          INSTA_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+          INSTA_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
         run: |
           python main.py
