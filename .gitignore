@@ -1,0 +1,40 @@
+# Python specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+env/
+venv/
+*.env
+*.venv
+
+# IDE specific (VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+
+# MacOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Python bytecode
+*.py[cod]
+
+# Caches (Pipenv, poetry, etc.)
+.Pipfile.lock
+*.egg-info/
+*.dist-info/
+
+# OpenAI API Key (if stored locally)
+.env
+
+# Any other temporary files you don't want to track
+*.bak
+*.swp
