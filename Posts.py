@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
 
-def CreatePost(Quote, BackgroundImagePath, CreatedPostPath):
+def CreatePost(Quote, BackgroundImagePath, FontColour, CreatedPostPath):
     
     # Open the background image
     BackgroundImage = Image.open(BackgroundImagePath)
@@ -11,7 +11,7 @@ def CreatePost(Quote, BackgroundImagePath, CreatedPostPath):
         BackgroundImage = BackgroundImage.convert('RGB')
     
     # Load the required font
-    font_path = "Fonts/Newyear Goo.ttf"  # Ensure this is the correct path to your font
+    font_path = "Fonts/Anantason-Bold.ttf"  # Ensure this is the correct path to your font
     font_size = 54
     font = ImageFont.truetype(font_path, font_size)
     
@@ -43,8 +43,8 @@ def CreatePost(Quote, BackgroundImagePath, CreatedPostPath):
     text_x_position = (image_width - text_width) / 2
     text_y_position = (image_height - text_height) / 2
     
-    # Add the wrapped text to the image at the calculated position
-    draw.text((text_x_position, text_y_position), wrapped_text, font=font, fill="black")
+    # Add the wrapped text to the image at the calculated position with selected Font Colour
+    draw.text((text_x_position, text_y_position), wrapped_text, font=font, fill=FontColour)
     
     # Save the final image to the specified output path
     BackgroundImage.save(CreatedPostPath)

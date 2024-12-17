@@ -38,3 +38,6 @@ Thumbs.db
 # Any other temporary files you don't want to track
 *.bak
 *.swp
+
+# Resulting output of the project\
+InstaPost.jpg
