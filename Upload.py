@@ -11,10 +11,6 @@ def UploadPost(image_path, caption):
     username = os.getenv("INSTA_USERNAME")
     password = os.getenv("INSTA_PASSWORD")
 
-    print(username, password)
-
-    """
-
     # Ensure the credentials exist
     if not username or not password:
         raise ValueError("Instagram username or password is missing")
@@ -38,4 +34,3 @@ def UploadPost(image_path, caption):
 
     # Upload an image to Instagram (provide the path to your image)
     bot.upload_photo(image_path, caption=caption)
-    """
