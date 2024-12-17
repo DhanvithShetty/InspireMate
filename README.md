@@ -1,4 +1,4 @@
-# Inspire Mate (Instagram Post Automation)
+# Inspire Mate (Instagram Account Automation)
 
 A Python project to automate the generation and uploading of inspirational quote images to Instagram. This project integrates image processing, text rendering, random quote fetching, and automated uploads using the several libraries.
 
