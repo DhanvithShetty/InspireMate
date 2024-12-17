@@ -43,6 +43,7 @@ def main():
         # Complete the caption by adding the CTA and hashtags
         PostCaption += f"\n\n{CallToAction}\n\n{PostHashtags}"
 
+        print(PostCaption)
         # Upload the post to Instagram
         #UploadPost(CreatedPostPath, PostCaption)
 
