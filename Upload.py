@@ -1,11 +1,19 @@
 from instabot import Bot
 import os
 import shutil
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv("credentials.env")
 
 def UploadPost(image_path, caption):
     # Get Instagram credentials from environment variables
     username = os.getenv("INSTA_USERNAME")
     password = os.getenv("INSTA_PASSWORD")
+
+    print(username, password)
+
+    """
 
     # Ensure the credentials exist
     if not username or not password:
@@ -30,3 +38,4 @@ def UploadPost(image_path, caption):
 
     # Upload an image to Instagram (provide the path to your image)
     bot.upload_photo(image_path, caption=caption)
+    """
