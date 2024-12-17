@@ -45,7 +45,7 @@ def main():
 
         print(PostCaption)
         # Upload the post to Instagram
-        #UploadPost(CreatedPostPath, PostCaption)
+        UploadPost(CreatedPostPath, PostCaption)
 
     except RateLimitError as e:
         # If there's a rate limit error, print the error and stop execution

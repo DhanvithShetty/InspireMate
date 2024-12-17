@@ -3,6 +3,14 @@ import os
 import shutil
 
 def UploadPost(image_path, caption):
+    # Get Instagram credentials from environment variables
+    username = os.getenv("INSTA_USERNAME")
+    password = os.getenv("INSTA_PASSWORD")
+
+    # Ensure the credentials exist
+    if not username or not password:
+        raise ValueError("Instagram username or password is missing")
+
     # Remove the 'config' folder if it exists
     if os.path.exists("config"):
         shutil.rmtree("config")
@@ -17,8 +25,8 @@ def UploadPost(image_path, caption):
     # Initialize the bot
     bot = Bot()
 
-    # Login to Instagram (replace with your credentials)
-    bot.login(username="your_username", password="your_password")
+    # Login to Instagram (using environment variables)
+    bot.login(username=username, password=password)
 
     # Upload an image to Instagram (provide the path to your image)
     bot.upload_photo(image_path, caption=caption)
