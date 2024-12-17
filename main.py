@@ -12,15 +12,8 @@ def main():
         Quote = Quote_Data['Quote']
         Author = Quote_Data['Author']
 
-        print(f"Quote: {Quote}")
-        print(f"Author: {Author}")
-
         # Randomly selecting a background and font color from Designs.py
         Background, FontColour = random.choice(list(Backgrounds_And_Font_Colours.items()))
-
-        print(f"Selected Background: {Background}")
-        print(f"Selected Font Color: {FontColour}")
-
         CreatedPostPath = "InstaPost.jpg"
 
         # Creating the post (image with quote)
@@ -42,8 +35,7 @@ def main():
 
         # Complete the caption by adding the CTA and hashtags
         PostCaption += f"\n\n{CallToAction}\n\n{PostHashtags}"
-
-        print(PostCaption)
+        
         # Upload the post to Instagram
         UploadPost(CreatedPostPath, PostCaption)
 
