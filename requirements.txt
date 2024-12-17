@@ -1,0 +1,3 @@
+Pillow==latest
+requests==latest
+instabot==latest
