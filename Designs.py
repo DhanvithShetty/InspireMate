@@ -14,6 +14,7 @@ Caption_Hashtags = [
     "#InspireOthers", "#MindsetMatters", "#DailyInspiration", 
     "#NeverGiveUp", "#SuccessQuotes", "#BeTheChange", 
     "#QuoteOfTheDay", "#MotivationalQuotes", "#InspirationalQuotes", 
-    "#HappinessIsAChoice", "#PersonalDevelopment", "#Mindfulness"
+    "#HappinessIsAChoice", "#PersonalDevelopment", "#Mindfulness","#Life",
+    "#Positivity","#Happiness",
 ]
 

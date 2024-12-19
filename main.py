@@ -1,4 +1,5 @@
 import random
+import emoji
 from Quotes import FetchQuote, RateLimitError
 from Posts import CreatePost
 from Upload import UploadPost
@@ -19,10 +20,15 @@ def main():
         # Creating the post (image with quote)
         CreatePost(Quote, Background, FontColour, CreatedPostPath)
 
+        # Emojis
+        red_heart = emoji.emojize(':red_heart:')
+
         # Preparing the caption with hashtags from Designs.py
         PostCaption = f'"{Quote}" - {Author}'
         
-        CallToAction = "Tag/Share this to someone who needs to hear this!"
+        CallToAction = f"Double Tap {red_heart} & Share with a friend"
+
+        CallToFollow = f"Follow @_inspire_mate_"
         
         # Mandatory Hashtags
         Hashtags = ["#InspireMate", "#QuotesToLiveBy"]
@@ -34,8 +40,8 @@ def main():
         PostHashtags = " ".join(Hashtags)
 
         # Complete the caption by adding the CTA and hashtags
-        PostCaption += f"\n\n{CallToAction}\n\n{PostHashtags}"
-        
+        PostCaption += f"\n\n{CallToAction}\n\n{CallToFollow}\n\n{PostHashtags}"
+
         # Upload the post to Instagram
         UploadPost(CreatedPostPath, PostCaption)
 
