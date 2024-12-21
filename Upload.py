@@ -16,7 +16,7 @@ def UploadPost(image_path, caption):
     
     cl = Client()
     cl.login(username, password)
-    print("Instagram Logic successful")
+    print("Instagram Login successful")
 
     cl.photo_upload(image_path, caption)
     print("Post uploaded successfully")
